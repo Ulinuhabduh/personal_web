@@ -1,0 +1,490 @@
+/* Global Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #4CAF50; /* Warna hijau */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* Navbar Styling */
+.navbar .nav-links {
+    display: flex; /* Default: tampil horizontal di layar besar */
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #c8f0c8;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hero Section Styling */
+#hero {
+    background: linear-gradient(to right, #4CAF50, #81C784); /* Gradasi warna hijau */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin: 10px 0 20px 0;
+}
+
+#hero .btn {
+    background-color: white;
+    color: #4CAF50;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#hero .btn:hover {
+    background-color: #81C784;
+    color: white;
+}
+
+/* About Section Styling */
+#about {
+    background-color: #efeded;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#about .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+#contact {
+    padding: 2rem;
+    text-align: center;
+}
+
+
+#portfolio {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Container Slider */
+.portfolio-slider {
+    width: 100%;
+    max-width: 800px; /* Batasi lebar slider */
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Kartu di dalam slider */
+.portfolio-cards {
+    display: flex; /* Atur kartu secara horizontal */
+    transition: transform 0.5s ease-in-out; /* Animasi saat berpindah */
+}
+
+/* Kartu di dalam slider */
+.card {
+    display: none; /* Sembunyikan semua kartu secara default */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+/* Kartu aktif */
+.card-active {
+    display: block; /* Tampilkan kartu aktif */
+}
+
+
+/* Navigasi Tombol */
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 10; /* Pastikan tombol di atas slider */
+}
+
+.slider-nav button {
+    background: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider-nav button:hover {
+    background: #45a049;
+}
+
+/* Layout Kartu */
+.card-content {
+    display: flex;
+    align-items: center; /* Menyelaraskan vertikal */
+    justify-content: space-between; /* Ruang antara deskripsi dan preview */
+    gap: 20px; /* Jarak antar kolom */
+    flex-wrap: wrap; /* Responsif: Bungkus ke baris baru jika layar kecil */
+}
+
+.card-description {
+    flex: 1; /* Bagian kiri mengambil ruang */
+    padding: 10px;
+}
+
+.card-description h3 {
+    margin-top: 0;
+    color: #4CAF50;
+}
+
+.card-description p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.card-description a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card-description a:hover {
+    background: #45a049;
+}
+
+/* Batas maksimal lebar kartu */
+.card {
+    max-width: 600px; /* Batas maksimum lebar kartu */
+    margin: 0 auto; /* Posisikan di tengah */
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+    border-radius: 10px; /* Sudut melengkung */
+    background: white;
+}
+
+/* Bagian Preview */
+.card-preview img {
+    max-width: 100%; /* Pastikan gambar responsif */
+    height: auto; /* Jaga proporsi gambar */
+    object-fit: contain; /* Pastikan gambar tidak terpotong */
+    border-radius: 10px; /* Sudut melengkung */
+}
+
+
+form {
+    width: 50%;
+    margin: 0 auto; 
+    padding: 1rem; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 5px; 
+    background-color: #f9f9f9; 
+}
+
+form input, form textarea, form button {
+    width: 100%; 
+    margin: 0.5rem 0; 
+    padding: 0.5rem; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 1rem; 
+}
+
+form button {
+    background-color: #4CAF50; 
+    color: white;
+    font-weight: bold; 
+    border: none; 
+    cursor: pointer; 
+}
+
+form button:hover {
+    background-color: #45a049; 
+    transition: background-color 0.3s ease;
+}
+
+/* Alert Box Styling */
+#alert-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50; /* Warna hijau untuk sukses */
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+    display: none; /* Tersembunyi secara default */
+}
+
+#alert-box.hidden {
+    display: none;
+}
+
+#alert-box p {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#alert-box button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#alert-box button:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+
+/* Animasi kartu masuk */
+@keyframes smoothSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(50%); /* Geser dari kanan */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Normal */
+    }
+}
+
+/* Animasi kartu keluar */
+@keyframes smoothSlideOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0); /* Posisi normal */
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%); /* Geser ke kiri */
+    }
+}
+
+/* Kartu masuk */
+.smooth-slide-in {
+    animation: smoothSlideIn 0.6s ease-out forwards; /* Tambahkan forwards untuk mempertahankan akhir animasi */
+}
+
+/* Kartu keluar */
+.smooth-slide-out {
+    animation: smoothSlideOut 0.6s ease-out forwards;
+}
+
+
+
+/* Media Queries untuk layar dengan lebar maksimal 768px */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+    /* Hero Section */
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    #hero .btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    /* Portfolio Section */
+    .portfolio-slider {
+        max-width: 100%;
+    }
+
+    .portfolio-cards {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .card-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card-description {
+        text-align: center;
+    }
+
+    .card-preview img {
+        max-width: 100%;
+    }
+
+    /* Form Section */
+    form {
+        width: 90%;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Queries untuk layar dengan lebar maksimal 480px */
+@media (max-width: 480px) {
+
+    /* Hero Section */
+    #hero h1 {
+        font-size: 1.5rem;
+    }
+
+    #hero p {
+        font-size: 0.9rem;
+    }
+
+    #hero .btn {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+
+    /* Portfolio Cards */
+    .card {
+        padding: 15px;
+    }
+
+    .card-description h3 {
+        font-size: 1rem;
+    }
+
+    .card-description p {
+        font-size: 0.85rem;
+    }
+
+    .card-description a {
+        font-size: 0.9rem;
+    }
+
+    /* Form Section */
+    form {
+        padding: 10px;
+    }
+
+    form button {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+}
+
+/* Animasi untuk dropdown menu */
+@keyframes dropdownSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Geser ke atas */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Normal */
+    }
+}

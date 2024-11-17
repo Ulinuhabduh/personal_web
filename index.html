@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Ulin Nuha Abduh</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">UlinNuha</div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#portfolio">Portofolio</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm M Ulin Nuha Abduh</h1>
+            <p>Machine Learning Enthusiast | Python Developer | Geophysicist</p>
+            <a href="#portfolio" class="btn">View My Work</a>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <p>Saya sedang mendalami Machine Learning dan Data Science</p>
+        </div>
+    </section>    
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-slider">
+            <!-- Tombol Navigasi -->
+            <div class="slider-nav">
+                <button onclick="slide('prev')">&lt;</button>
+                <button onclick="slide('next')">&gt;</button>
+            </div>
+            <!-- Kartu Portfolio -->
+            <div class="portfolio-cards">
+                <div class="card">
+                    <div class="card-content">
+                        <!-- Bagian Deskripsi -->
+                        <div class="card-description">
+                            <h3>1D Geoelectric Inversion Web App</h3>
+                            <p><strong>Sep 2024 - Present</strong></p>
+                            <p>I’m thrilled to unveil a web-based geoelectric inversion tool built with Python and Streamlit! It enables the processing and inversion of Schlumberger configuration data, with robust visualization of results and cross-sections.</p>
+                            <a href="https://inversion-geoelectric-1d.streamlit.app/" target="_blank">Visit Website</a>
+                        </div>
+                        <!-- Bagian Preview -->
+                        <div class="card-preview">
+                            <img src="images/geolistrik.png" alt="Geoelectric App Preview">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <!-- Bagian Deskripsi -->
+                        <div class="card-description">
+                            <h3>Website Geosphere ITS</h3>
+                            <p><strong>Dec 2023 - Present</strong></p>
+                            <p>In this project, I was entrusted as the head of the Web Development division. I organized job assignments for staff, set deadlines, and integrated all staff's code into a complete website.</p>
+                            <a href="https://geosphereits.id" target="_blank">Visit Website</a>
+                        </div>
+                        <!-- Bagian Preview -->
+                        <div class="card-preview">
+                            <img src="images/geosphere.png" alt="Geosphere Website Preview">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <!-- Bagian Deskripsi -->
+                        <div class="card-description">
+                            <h3>Machine Learning Builder and AI Chat</h3>
+                            <p><strong>Jul 2024 - Jul 2024</strong></p>
+                            <ul>
+                                <li>Rapid and effortless machine learning model creation</li>
+                                <li>Comprehensive data profiling for data understanding</li>
+                                <li>Accurate prediction of future data points</li>
+                                <li>AI Chat</li>
+                            </ul>
+                            <a href="https://machinelearningbuilder.streamlit.app/" target="_blank">Visit Website</a>
+                        </div>
+                        <!-- Bagian Preview -->
+                        <div class="card-preview">
+                            <img src="images/ML.png" alt="Machine Learning Builder Preview">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <!-- Bagian Deskripsi -->
+                        <div class="card-description">
+                            <h3>Scholar Search</h3>
+                            <p><strong>Jul 2024 - Jul 2024</strong></p>
+                            <ul>
+                                <li>Advanced search for journals by keyword or title</li>
+                                <li>Year range filter</li>
+                                <li>Display detailed results with APA citation generator</li>
+                                <li>User-friendly sidebar for easy navigation</li>
+                            </ul>
+                            <a href="https://journalsearch.streamlit.app/" target="_blank">Visit Website</a>
+                        </div>
+                        <!-- Bagian Preview -->
+                        <div class="card-preview">
+                            <img src="images/jurnal.png" alt="Scholar Search Preview">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <!-- Bagian Deskripsi -->
+                        <div class="card-description">
+                            <h3>Equation Solver</h3>
+                            <p><strong>Agustus 2024</strong></p>
+                            <p>This application allows you to solve any mathematical equation easily. Just enter the equation and variables you want to solve, and let the app do the rest.</p>
+                            <a href="https://equationsolver.streamlit.app/" target="_blank">Visit Website</a>
+                        </div>
+                        <!-- Bagian Preview -->
+                        <div class="card-preview">
+                            <img src="images/equation.png" alt="Equation Solver Preview">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Hubungi Saya</h2>
+        <p>Ingin berkolaborasi? Jangan ragu untuk menghubungi saya!</p>
+        <form name="submit-to-google-sheet" method="POST">
+            <input name="Nama" type="text" placeholder="Your Name" required>
+            <input name="Email" type="email" placeholder="Your Email" required>
+            <textarea name="Pesan" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    
+        <div id="alert-box" class="hidden">
+            <p id="alert-message"></p>
+            <button onclick="closeAlert()">OK</button>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 M Ulin Nuha Abduh. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
