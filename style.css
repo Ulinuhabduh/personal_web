@@ -105,6 +105,10 @@ body {
     color: white;
 }
 
+.name {
+    color: rgb(4, 232, 249);
+}
+
 /* About Section Styling */
 #about {
     background-color: #efeded;
@@ -286,13 +290,30 @@ form button:hover {
     transition: background-color 0.3s ease;
 }
 
-/* Alert Box Styling */
+/* Tombol Submit */
+#submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Alert Box */
 #alert-box {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #4CAF50; /* Warna hijau untuk sukses */
+    background-color: #4CAF50; /* Hijau untuk sukses */
     color: white;
     padding: 20px 30px;
     border-radius: 10px;
@@ -308,7 +329,7 @@ form button:hover {
 
 #alert-box p {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -320,7 +341,7 @@ form button:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 #alert-box button:hover {

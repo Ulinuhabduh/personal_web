@@ -52,18 +52,32 @@ function closeAlert() {
     alertBox.style.display = 'none';
 }
 
-// Event listener untuk submit
-form.addEventListener('submit', e => {
+const submitButton = document.querySelector('button[type="submit"]'); // Pilih tombol submit
+
+// Tambahkan event listener untuk submit
+form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    // Ubah tombol menjadi "Loading..."
+    submitButton.textContent = 'Loading...';
+    submitButton.disabled = true;
+
+    // Proses fetch data
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-            showAlert('Form successfully submitted!'); 
-            form.reset(); 
+        .then((response) => {
+            showAlert('Form successfully submitted!'); // Tampilkan alert sukses
+            form.reset(); // Kosongkan form
         })
-        .catch(error => {
-            showAlert('An error occurred. Please try again.', false); 
+        .catch((error) => {
+            showAlert('An error occurred. Please try again.', false); // Tampilkan alert error
+        })
+        .finally(() => {
+            // Kembalikan tombol ke status semula
+            submitButton.textContent = 'Send';
+            submitButton.disabled = false;
         });
 });
+
 
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
