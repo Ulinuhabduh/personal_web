@@ -11,9 +11,9 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">UlinNuha</div>
-            <button class="hamburger" onclick="toggleMenu()">☰</button>
             <ul class="nav-links">
                 <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#competitions">Competitions</a></li>
                 <li><a href="#portfolio">Portofolio</a></li>
                 <li><a href="#contact">Kontak</a></li>
             </ul>
@@ -34,7 +34,31 @@
             <h2>Tentang Saya</h2>
             <p>Saya sedang mendalami Machine Learning dan Data Science</p>
         </div>
-    </section>    
+    </section>
+    
+    <section id="competitions">
+        <div class="container">
+            <h2>Competitions</h2>
+            <ul class="competition-list">
+                <li>
+                    <strong>Juara 1</strong> - Hackathon Champion: Machine Learning in Geoscience 2024 <br>
+                    <em>Penyelenggara:</em> Himpunan Ahli Geofisika Indonesia x Microsoft <br>
+                    <p>
+                        Juara Hackathon: Machine Learning in Geoscience (HAGI x Microsoft Indonesia) bersama tim AVOForge. Kami mengembangkan model prediksi gas/non-gas dari data AVO berbasis gambar menggunakan ResNet50 dan kNN, lalu mengintegrasikannya ke aplikasi web berbasis Streamlit.
+                    </p>
+                </li>
+                <li>
+                    <strong>Juara 2</strong> - Kompetisi Karya Tulis Ilmiah (K2TI) Geopoint 2025 <br>
+                    <em>Penyelenggara:</em> Ikatan Mahasiswa Geodesi : ITB <br>
+                    <p>
+                        Juara 2 Kompetisi Karya Tulis Ilmiah (K2TI) di Geopoint 2025 bersama Tim Ababil. Dalam kompetisi ini kami memberikan solusi untuk melakukan monitoring konsep "Forest City" di IKN dengan mengimplementasikan AI yaitu LangSAM (Languange-Segment Anything Model) untuk melakukan segmentasi terhadap bangunan yang terdapat di sana dan kami tampilkan statistik sekaligus petanya di dalam WebGIS berbasis Streamlit
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    
 
     <section id="portfolio">
         <h2>Portfolio</h2>
@@ -53,8 +77,8 @@
                             <h3>1D Geoelectric Inversion Web App</h3>
                             <p><strong>Sep 2024 - Present</strong></p>
                             <p>I’m thrilled to unveil a web-based geoelectric inversion tool built with Python and Streamlit! It enables the processing and inversion of Schlumberger configuration data, with robust visualization of results and cross-sections.</p>
-                            <a href="https://inversion-geoelectric-1d.streamlit.app/" target="_blank">Visit Website</a>
                         </div>
+                        <a class="link" href="https://inversion-geoelectric-1d.streamlit.app/" target="_blank">Visit Website</a>
                         <!-- Bagian Preview -->
                         <div class="card-preview">
                             <img src="images/geolistrik.png" alt="Geoelectric App Preview">
@@ -68,8 +92,8 @@
                             <h3>Website Geosphere ITS</h3>
                             <p><strong>Dec 2023 - Present</strong></p>
                             <p>In this project, I was entrusted as the head of the Web Development division. I organized job assignments for staff, set deadlines, and integrated all staff's code into a complete website.</p>
-                            <a href="https://geosphereits.id" target="_blank">Visit Website</a>
                         </div>
+                        <a class="link" href="https://geosphereits.id" target="_blank">Visit Website</a>
                         <!-- Bagian Preview -->
                         <div class="card-preview">
                             <img src="images/geosphere.png" alt="Geosphere Website Preview">
@@ -82,14 +106,11 @@
                         <div class="card-description">
                             <h3>Machine Learning Builder and AI Chat</h3>
                             <p><strong>Jul 2024 - Jul 2024</strong></p>
-                            <ul>
-                                <li>Rapid and effortless machine learning model creation</li>
-                                <li>Comprehensive data profiling for data understanding</li>
-                                <li>Accurate prediction of future data points</li>
-                                <li>AI Chat</li>
-                            </ul>
-                            <a href="https://machinelearningbuilder.streamlit.app/" target="_blank">Visit Website</a>
+                            <p>
+                                The platform enables quick ML model creation, comprehensive data profiling, accurate predictions, and includes AI chat capabilities.
+                            </p>
                         </div>
+                        <a class="link" href="https://machinelearningbuilder.streamlit.app/" target="_blank">Visit Website</a>
                         <!-- Bagian Preview -->
                         <div class="card-preview">
                             <img src="images/ML.png" alt="Machine Learning Builder Preview">
@@ -102,14 +123,11 @@
                         <div class="card-description">
                             <h3>Scholar Search</h3>
                             <p><strong>Jul 2024 - Jul 2024</strong></p>
-                            <ul>
-                                <li>Advanced search for journals by keyword or title</li>
-                                <li>Year range filter</li>
-                                <li>Display detailed results with APA citation generator</li>
-                                <li>User-friendly sidebar for easy navigation</li>
-                            </ul>
-                            <a href="https://journalsearch.streamlit.app/" target="_blank">Visit Website</a>
+                            <p>
+                                The platform enables advanced journal searches by keyword or title, filters by year, provides detailed results with an APA citation generator, and features a user-friendly navigation sidebar.
+                            </p>
                         </div>
+                        <a class="link" href="https://journalsearch.streamlit.app/" target="_blank">Visit Website</a>
                         <!-- Bagian Preview -->
                         <div class="card-preview">
                             <img src="images/jurnal.png" alt="Scholar Search Preview">
@@ -123,8 +141,8 @@
                             <h3>Equation Solver</h3>
                             <p><strong>Agustus 2024</strong></p>
                             <p>This application allows you to solve any mathematical equation easily. Just enter the equation and variables you want to solve, and let the app do the rest.</p>
-                            <a href="https://equationsolver.streamlit.app/" target="_blank">Visit Website</a>
                         </div>
+                        <a class="link" href="https://equationsolver.streamlit.app/" target="_blank">Visit Website</a>
                         <!-- Bagian Preview -->
                         <div class="card-preview">
                             <img src="images/equation.png" alt="Equation Solver Preview">

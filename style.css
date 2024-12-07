@@ -139,6 +139,52 @@ body {
     text-align: center;
 }
 
+#competitions {
+    padding: 2rem 0;
+    background-color: #d9d8d8;
+}
+
+#competitions h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.competition-list {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.competition-list li {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.competition-list li strong {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.competition-list li em {
+    display: block;
+    margin-top: 0.5rem;
+    color: #666;
+    font-style: italic;
+}
+
+.competition-list li p {
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+
 
 #portfolio {
     padding: 2rem;
@@ -226,7 +272,7 @@ body {
     line-height: 1.6;
 }
 
-.card-description a {
+.card-content .link {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
@@ -236,7 +282,7 @@ body {
     border-radius: 5px;
 }
 
-.card-description a:hover {
+.link.hover {
     background: #45a049;
 }
 
@@ -414,6 +460,32 @@ footer {
         padding: 8px 15px;
     }
 
+    .competition-list {
+        padding: 0 1rem;
+    }
+
+    .competition-list li {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .competition-list li strong {
+        font-size: 1rem;
+    }
+
+    .competition-list li em {
+        font-size: 0.9rem;
+    }
+
+    .competition-list li p {
+        font-size: 0.85rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
     /* Portfolio Section */
     .portfolio-slider {
         max-width: 100%;
@@ -434,7 +506,11 @@ footer {
     }
 
     .card-description {
-        text-align: center;
+        text-align: left;
+    }
+
+    .card-description ul li {
+        font-size: 1rem;
     }
 
     .card-preview img {
